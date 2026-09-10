@@ -1385,3 +1385,400 @@ a {
   }
 
 }
+
+/* =========================================================
+   HERO FINAL FIX
+   タイトル改行・中央縦線を完全修正
+========================================================= */
+
+.hero {
+  position: relative !important;
+  overflow: hidden !important;
+
+  min-height: 680px;
+
+  background:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(214, 173, 74, 0.09),
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
+      #080808 0%,
+      #0b0b09 55%,
+      #151208 100%
+    ) !important;
+}
+
+
+/* 2カラム構造を解除 */
+.hero-grid {
+  position: relative !important;
+
+  display: block !important;
+
+  min-height: 680px !important;
+
+  width: min(var(--max), calc(100% - 64px)) !important;
+  margin: 0 auto !important;
+}
+
+
+/* 左側テキスト */
+.hero-copy {
+  position: relative !important;
+  z-index: 5 !important;
+
+  width: 100% !important;
+  max-width: none !important;
+
+  min-height: 680px !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+
+  padding:
+    80px
+    0
+    80px
+    0 !important;
+
+  border: none !important;
+  border-right: none !important;
+  border-left: none !important;
+}
+
+
+/* タイトル */
+.hero-copy h1,
+.hero h1 {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: baseline !important;
+
+  width: max-content !important;
+  max-width: none !important;
+
+  margin:
+    12px
+    0
+    34px !important;
+
+  padding: 0 !important;
+
+  font-size:
+    clamp(
+      58px,
+      5.1vw,
+      88px
+    ) !important;
+
+  line-height: 1.18 !important;
+
+  letter-spacing: 0 !important;
+
+  white-space: nowrap !important;
+
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+
+/* 金色部分 */
+.hero-copy h1 span,
+.hero h1 span {
+  display: inline !important;
+
+  white-space: nowrap !important;
+
+  color: #ead690 !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+/* 上のキャッチ */
+.hero-copy .eyebrow,
+.hero .eyebrow {
+  position: relative !important;
+  z-index: 10 !important;
+
+  margin:
+    0
+    0
+    8px !important;
+
+  color: #e0bd52 !important;
+
+  font-size:
+    clamp(
+      18px,
+      1.45vw,
+      24px
+    ) !important;
+}
+
+
+/* 説明文 */
+.hero-lead {
+  position: relative !important;
+  z-index: 10 !important;
+
+  width: fit-content !important;
+
+  margin:
+    0
+    0
+    30px !important;
+
+  font-size:
+    clamp(
+      17px,
+      1.3vw,
+      22px
+    ) !important;
+
+  line-height: 1.9 !important;
+}
+
+
+/* LINEボタン */
+.hero-copy .btn-large {
+  position: relative !important;
+  z-index: 10 !important;
+
+  width: fit-content !important;
+  min-width: 370px !important;
+}
+
+
+/* ボタン下 */
+.hero-copy .microcopy {
+  position: relative !important;
+  z-index: 10 !important;
+
+  width: fit-content !important;
+}
+
+
+/* =========================================================
+   右側装飾
+========================================================= */
+
+.hero-art {
+  position: absolute !important;
+
+  z-index: 1 !important;
+
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: auto !important;
+
+  width: 46% !important;
+  height: 100% !important;
+  min-height: 680px !important;
+
+  display: block !important;
+
+  border: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+
+  outline: 0 !important;
+
+  background:
+    radial-gradient(
+      circle at 70% 20%,
+      rgba(212, 175, 55, 0.08),
+      transparent 45%
+    ) !important;
+
+  pointer-events: none !important;
+}
+
+
+/* 中央に線を作りそうな疑似要素も殺す */
+.hero-grid::before,
+.hero-grid::after,
+.hero-copy::before,
+.hero-copy::after,
+.hero-art::before,
+.hero-art::after {
+  border-left: none !important;
+  border-right: none !important;
+}
+
+
+/* 右上英字 */
+.hero-label {
+  position: absolute !important;
+
+  top: 105px !important;
+  left: 70px !important;
+
+  z-index: 3 !important;
+
+  color: #e5c86b !important;
+
+  font-size: 15px !important;
+
+  line-height: 1.8 !important;
+
+  letter-spacing: 0.2em !important;
+}
+
+
+/* =========================================================
+   金ライン
+========================================================= */
+
+.hero-art .line {
+  position: absolute !important;
+
+  display: block !important;
+
+  height: 1px !important;
+
+  border: 0 !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #caa33f,
+      #efd46e
+    ) !important;
+
+  transform-origin: left center !important;
+}
+
+
+.hero-art .l1 {
+  width: 470px !important;
+
+  top: 200px !important;
+  left: 100px !important;
+
+  transform:
+    rotate(-39deg) !important;
+}
+
+
+.hero-art .l2 {
+  width: 470px !important;
+
+  top: 430px !important;
+  left: 270px !important;
+
+  transform:
+    rotate(-43deg) !important;
+}
+
+
+.hero-art .l3 {
+  width: 560px !important;
+
+  bottom: 70px !important;
+  left: 100px !important;
+
+  transform:
+    rotate(15deg) !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .hero-copy h1,
+  .hero h1 {
+    font-size:
+      clamp(
+        48px,
+        6vw,
+        68px
+      ) !important;
+  }
+
+
+  .hero-art {
+    width: 42% !important;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: auto !important;
+  }
+
+
+  .hero-grid {
+    min-height: auto !important;
+
+    width:
+      calc(100% - 28px) !important;
+  }
+
+
+  .hero-copy {
+    min-height: auto !important;
+
+    padding:
+      56px
+      0
+      60px !important;
+  }
+
+
+  .hero-art {
+    display: none !important;
+  }
+
+
+  .hero-copy h1,
+  .hero h1 {
+    display: block !important;
+
+    width: 100% !important;
+
+    white-space: normal !important;
+
+    font-size:
+      clamp(
+        40px,
+        11vw,
+        54px
+      ) !important;
+
+    line-height: 1.3 !important;
+  }
+
+
+  .hero-copy h1 span,
+  .hero h1 span {
+    display: block !important;
+
+    white-space: nowrap !important;
+  }
+
+
+  .hero-copy .btn-large {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+}
